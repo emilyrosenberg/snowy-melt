@@ -31,7 +31,7 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 
 Happy coding! -->
 
-# Snowy Melt
+# ❄️ Snowy Melt
 
 <!-- Mockup -->
 
@@ -55,6 +55,10 @@ When the user clicks a letter, the game provides feedback. If the letter is in t
 
 End <br>
 After the mystery word is solved or the player runs out of guesses, the game provides feedback, and shows an option to play again.
+
+### Design
+I used Lucidchart to design the flow of this game's functions. <br> ![Flow chart](readme-images/flow-chart.png)
+
 
 <!-- - __Navigation Bar__
 
@@ -115,6 +119,7 @@ In addition, you may also use this section to discuss plans for additional featu
 ## Technologies used
 Python <br>
 Lucidchart <br>
+Heroku <br>
 Github <br>
 Git <br>
 Gitpod
