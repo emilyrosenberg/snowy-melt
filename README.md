@@ -42,7 +42,19 @@ The game is designed to be fun and entertaining for people of every age and abil
 
 <!-- In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things. -->
 
-### Existing Features
+### Current features
+
+Greeting <br>
+The game asks for the user's name, and explains how the game works. <br>
+
+Start <br>
+At the beginning of the game, the user sees the whole snowman, the blank lines where the letters representing the mystery word, and a prompt to guess a letter. <br>
+
+Play <br>
+When the user clicks a letter, the game provides feedback. If the letter is in the word, it shows on the board. If not, the snowman melts down one level. <br>
+
+End <br>
+After the mystery word is solved or the player runs out of guesses, the game provides feedback, and shows an option to play again.
 
 <!-- - __Navigation Bar__
 
@@ -96,9 +108,16 @@ For some/all of your features, you may choose to reference the specific project 
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future: -->
 
-### Features Left to Implement
+### Future implementations
 
 <!-- - Another feature idea -->
+
+## Technologies used
+Python <br>
+Lucidchart <br>
+Github <br>
+Git <br>
+Gitpod
 
 ## Testing 
 
@@ -111,7 +130,7 @@ You should also mention in this section any interesting bugs or problems you dis
 If this section grows too long, you may want to split it off into a separate file and link to it from here. -->
 
 
-### Validator Testing 
+### Code Validation 
 
 <!-- - HTML
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html)
@@ -133,6 +152,8 @@ If this section grows too long, you may want to split it off into a separate fil
 
 The live link can be found here - https://code-institute-org.github.io/love-running-2.0/index.html  -->
 
+## Finished game
+<!-- Screenshots -->
 
 ## Credits 
 
@@ -154,7 +175,7 @@ You can break the credits section up into Content and Media, depending on what y
 
 Congratulations on completing your Readme, you have made another big stride in the direction of being a developer!  -->
 
-## Other General Project Advice
+<!-- ## Other General Project Advice -->
 
 <!-- Below you will find a couple of extra tips that may be helpful when completing your project. Remember that each of these projects will become part of your final portfolio so it’s important to allow enough time to showcase your best work! 
 
