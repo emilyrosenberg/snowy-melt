@@ -21,17 +21,14 @@ class Snowy:
         # Shows _ for each letter.
         self.secret_word = len(self.word)*["_"]
 
-    
-    # Don't un-comment this because right now it prints forever
     def start_game(self):
-        print("The game is starting")
-    #     print(snowy_image(self.tries))
-    #     print(*self.secret_word)
-    #     print(*self.guesses)
+        print(snowy_image(self.tries))
+        print(*self.secret_word)
+        print(*self.guesses)
 
     def validate_guess(self, data):
         """
-        Checks the input to validate that it is one letter.
+        Checks the input to make sure it is one letter.
         """
         try:
             if not data.isalpha():
@@ -43,7 +40,7 @@ class Snowy:
             if data in self.guesses:
                 raise ValueError(f"You already guessed: {data}")
         except ValueError as e:
-            print(f"Invalid input: {e}. Please try again.\n")
+            print(f"Invalid input: {e}.\n")
             return False
         return True
 
@@ -66,6 +63,7 @@ class Snowy:
         Checks if the letter is in the word.
         Returns the index of the first item that is equal to data.
         """
+        # Where does this number (10) come from? Is that the number of words? It is 15 in the Hangman Game
         if data not in self.word:
             self.tries -= 1
             print(
@@ -79,6 +77,21 @@ class Snowy:
             print(
                 10*"\n", f"Great job! You have {self.tries}"
                 " more chances.")
+            
+    def word_complete(self):
+        """
+        Checks for remaining "_".
+        If none remain, the word is completed.
+        Otherwise the game continues.
+        """
+        if "_" not in self.secret_word:
+            self.start_game()
+            return True
+
+    def check_tries(self):
+        if self.tries <= 0:
+            self.start_game()
+            return True
 
 def main():
 
@@ -108,7 +121,6 @@ def main():
     #Not working yet, doesn't get "word" or convert to uppercase
     word = words in words
     word_input = random.choice(words).upper()
-    print(words)
 
     player = Snowy(name, word_input)
     while True: 
