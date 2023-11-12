@@ -1,3 +1,7 @@
+"""
+Words and definitions adapted from Weather Words https://www.metoffice.gov.uk/weather/learn-about/met-office-for-schools/other-content/other-resources/weather-words
+"""
+
 words = [
 'fog',
 'shovel',
