@@ -4,16 +4,16 @@
 
 # import random
 # import os
+# Do I need these? ^
+
 from words_list import words, hints
 from snowy_image import snowy_image
 
 class Snowy:
-    # From Hangman Game by Klara Martinsson
+    # Inspired by Hangman Game by Klara Martinsson
     """
     Holds details to create and play the game.
     """
-# Need to add code to show the hint, show the already-guessed letters, and loop through the game after a letter is guessed
-# Need to add win/lose code, and to display the "it's snowing" end screen
 
     def __init__(self, name, word, hint):
         self.name = name
@@ -56,6 +56,7 @@ class Snowy:
         guess the letter again, otherwise the loop breaks.
         """
         while True:
+            # Change this to .upper() once I figure out how to make word uppercase
             guess = input("\nGuess a letter: ").lower()
             if self.validate_guess(guess):
                 break
@@ -101,7 +102,7 @@ class Snowy:
 def main():
 
     """
-    Welcomes the player by name, shows the rules
+    Welcomes the player by name, shows the rules.
     """
     print("\nWelcome to Snowy Melt!")
 
@@ -121,7 +122,7 @@ def main():
     """
     Gets a word from the list of words and displays it in uppercase
     """
-    # Not working yet, doesn't get "word" or convert to uppercase
+    # Not working yet, needs to convert word to uppercase
     for word in words:
         print(word)
   
@@ -131,7 +132,7 @@ def main():
     player = Snowy(name, word, hint)
     while True: 
         """
-        Keeps the game running until word is completed.
+        Runs the game until the word is completed or there are no more tries.
         """
         player.start_game()
         player.guess_letter()
