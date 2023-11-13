@@ -136,11 +136,15 @@ def main():
         player.start_game()
         player.guess_letter()
         if player.word_complete():
-            print(f"You win! The word was: {word}\n")
+            # Add code to print first (unmelted) Snowy image
+            print(f"You win, {name}! The word is: {word}\n")
             break
         if player.check_tries():
-            print(f"You lose! The word was: {word}\n")
+            print(f"Sorry {name}, you lose. The word is: {word}\n")
             break
     
+    input(f"It's snowing... press Enter to play again")
+    # Add code to play again
+
 main()
 
