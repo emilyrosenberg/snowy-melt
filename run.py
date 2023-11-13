@@ -2,7 +2,7 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
-import random
+# import random
 import os
 from words_list import words, hints
 from snowy_image import snowy_image
@@ -12,11 +12,15 @@ class Snowy:
     """
     Holds details to create and play the game.
     """
-    def __init__(self, name, word):
+# Need to add code to show the hint, show the already-guessed letters, and loop through the game after a letter is guessed
+# Need to add win/lose code, and to display the "it's snowing" end screen
+
+    def __init__(self, name, word, hint):
         self.name = name
         self.word = [x for x in word]
+        self.hint = hint
         # Holds already-guessed letters
-        self.guesses = []  
+        self.guesses = []
         self.tries = 5
         # Shows _ for each letter.
         self.secret_word = len(self.word)*["_"]
@@ -25,7 +29,9 @@ class Snowy:
         print(snowy_image(self.tries))
         print(*self.secret_word)
         print(*self.guesses)
-
+        print(f"\nHint: ")
+        print(*self.hint)
+      
     def validate_guess(self, data):
         """
         Checks the input to make sure it is one letter.
@@ -63,11 +69,10 @@ class Snowy:
         Checks if the letter is in the word.
         Returns the index of the first item that is equal to data.
         """
-        # Where does this number (10) come from? Is that the number of words? It is 15 in the Hangman Game
         if data not in self.word:
             self.tries -= 1
             print(
-                10*"\n", f"Sorry that letter is not in the word. You have {self.tries}"
+                f"\nSorry that letter is not in the word. You have {self.tries}"
                 " more chances.")
 
         while data in self.word:
@@ -75,7 +80,7 @@ class Snowy:
             self.secret_word[i] = data
             self.word[i] = "."
             print(
-                10*"\n", f"Great job! You have {self.tries}"
+                f"\nGreat job! You have {self.tries}"
                 " more chances.")
             
     def word_complete(self):
@@ -114,15 +119,17 @@ def main():
     # Does this need validation?
 
     """
-    Gets a random word from the list of words and displys it in uppercase
+    Gets a random word from the list of words and displays it in uppercase
     """
-    global word_input
 
-    #Not working yet, doesn't get "word" or convert to uppercase
-    word = words in words
-    word_input = random.choice(words).upper()
+    # Not working yet, doesn't get "word" or convert to uppercase
+    for word in words:
+        print(word)
+  
+    for hint in hints:
+        print(hint)
 
-    player = Snowy(name, word_input)
+    player = Snowy(name, word, hint)
     while True: 
         """
         Keeps the game running until word is completed.
