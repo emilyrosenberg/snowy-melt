@@ -2,11 +2,12 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
-# import random
-# import os
-# Do I need these? ^
+"""
+Get words, hints, and images from other .py files
+"""
 
 from words_list import words, hints
+# from words_list import word_hint
 from snowy_image import snowy_image
 
 class Snowy:
@@ -17,7 +18,7 @@ class Snowy:
 
     def __init__(self, name, word, hint):
         self.name = name
-        self.word = [x for x in word]
+        self.word = [x for x in word.upper()]
         self.hint = hint
         # Holds already-guessed letters
         self.guesses = []
@@ -56,8 +57,7 @@ class Snowy:
         guess the letter again, otherwise the loop breaks.
         """
         while True:
-            # Change this to .upper() once I figure out how to make word uppercase
-            guess = input("\nGuess a letter: ").lower()
+            guess = input("\nGuess a letter: ").upper()
             if self.validate_guess(guess):
                 break
         # Adds the guessed letter to the list of guesses
@@ -117,17 +117,19 @@ def main():
     print(f"\nHi {name}! To play, guess the letters in the mystery word.\nYou get 5 incorrect guesses before Snowy melts away...\n")
         
     start_game = input("Are you ready? Press Enter to start the game!\n")
-    # Does this need validation?
+    # Add code to press any key/or to do nothing unless enter is clicked
 
     """
     Gets a word from the list of words and displays it in uppercase
     """
     # Not working yet, needs to convert word to uppercase
+    # It shouldn't do anything to the hint but I have to declare the hint
+    # At least now it doesn't print when the game starts
     for word in words:
-        print(word)
+        word.upper()
   
     for hint in hints:
-        print(hint)
+        hint.upper()
 
     player = Snowy(name, word, hint)
     while True: 
@@ -138,14 +140,14 @@ def main():
         player.guess_letter()
         if player.word_complete():
             # Add code to print first (unmelted) Snowy image
-            print(f"You win, {name}! The word is: {word}\n")
+            print(f"\nYou win, {name}! The word is: {word.upper()}\n")
             break
         if player.check_tries():
-            print(f"Sorry {name}, you lose. The word is: {word}\n")
+            print(f"\nSorry {name}, you lose. The word is: {word.upper()}\n")
             break
     
     input(f"It's snowing... press Enter to play again")
+    # Add code to press any key/or to do nothing unless enter is clicked
     # Add code to play again
 
 main()
-

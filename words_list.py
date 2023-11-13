@@ -27,3 +27,24 @@ hints = [
 'Water vapor in the air',
 'An electric flash'
 ]
+
+
+# word_hint = {
+# 'fog': 'A cloud on the ground',
+# 'shovel': 'A hand tool',
+# 'frigid': 'Intensely cold',
+# 'atmosphere': 'What is all around us',
+# 'blizzard': 'A severe winter storm',
+# 'rainbow': 'A beautiful arc',
+# 'ozone': 'It reflects sunlight back into space',
+# 'frost': 'Frozen crystals',
+# 'humidity': 'Water vapor in the air',
+# 'lightning': 'An electric flash'
+# }
+
+# keys = list(word_hint.keys())
+# print(keys)
+
+# print("Dict key-value are : ")
+# for i in word_hint:
+#     print(i, word_hint[i])
