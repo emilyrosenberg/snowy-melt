@@ -45,7 +45,7 @@ class Snowy:
                 raise ValueError(
                     f"You entered: {data}. Please enter only one letter")
             if data in self.guesses:
-                raise ValueError(f"You already guessed: {data}")
+                raise ValueError(f"You already entered: {data}")
         except ValueError as e:
             print(f"Invalid input: {e}.\n")
             return False
@@ -53,11 +53,11 @@ class Snowy:
 
     def guess_letter(self):
         """
-        If validate_guess function comes back as false player get to
-        guess the letter again, otherwise the loop breaks.
+        Takes the input, makes it uppercase and adds it to the list of guesses.
+        Sends it to be validated.
         """
         while True:
-            guess = input("\nGuess a letter: ").upper()
+            guess = input("\nGuess a letter: \n").upper()
             if self.validate_guess(guess):
                 break
         # Adds the guessed letter to the list of guesses
@@ -108,7 +108,7 @@ def main():
 
     # Name validation from Hangman Game by Klara Martinsson
     while True:
-        name = input("What's your name? ")
+        name = input("What's your name? \n")
         if not name.isalpha():
             print(f'\nInvalid name, please enter your name.')
         else:
@@ -122,9 +122,7 @@ def main():
     """
     Gets a word from the list of words and displays it in uppercase
     """
-    # Not working yet, needs to convert word to uppercase
-    # It shouldn't do anything to the hint but I have to declare the hint
-    # At least now it doesn't print when the game starts
+    # Useless function but I need a way to declare word and hint
     for word in words:
         word.upper()
   
@@ -146,7 +144,7 @@ def main():
             print(f"\nSorry {name}, you lose. The word is: {word.upper()}\n")
             break
     
-    input(f"It's snowing... press Enter to play again")
+    input(f"It's snowing... press Enter to play again\n")
     # Add code to press any key/or to do nothing unless enter is clicked
     # Add code to play again
 
