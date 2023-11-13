@@ -16,14 +16,14 @@ words = [
 ]
 
 hints = [
-'\nA cloud on the ground',
-'\nA hand tool',
-'\nIntensely cold',
-'\nWhat is all around us',
-'\nA severe winter storm',
-'\nA beautiful arc',
-'\nIt reflects sunlight back into space',
-'\nFrozen crystals',
-'\nWater vapor in the air',
-'\nAn electric flash'
+'A cloud on the ground',
+'A hand tool',
+'Intensely cold',
+'What is all around us',
+'A severe winter storm',
+'A beautiful arc',
+'It reflects sunlight back into space',
+'Frozen crystals',
+'Water vapor in the air',
+'An electric flash'
 ]

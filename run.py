@@ -3,7 +3,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
 # import random
-import os
+# import os
 from words_list import words, hints
 from snowy_image import snowy_image
 
@@ -30,7 +30,7 @@ class Snowy:
         print(*self.secret_word)
         print(*self.guesses)
         print(f"\nHint: ")
-        print(*self.hint)
+        print(self.hint)
       
     def validate_guess(self, data):
         """
@@ -56,7 +56,7 @@ class Snowy:
         guess the letter again, otherwise the loop breaks.
         """
         while True:
-            guess = input("Guess a letter: ").upper()
+            guess = input("\nGuess a letter: ").lower()
             if self.validate_guess(guess):
                 break
         # Adds the guessed letter to the list of guesses
@@ -119,9 +119,8 @@ def main():
     # Does this need validation?
 
     """
-    Gets a random word from the list of words and displays it in uppercase
+    Gets a word from the list of words and displays it in uppercase
     """
-
     # Not working yet, doesn't get "word" or convert to uppercase
     for word in words:
         print(word)
@@ -136,7 +135,12 @@ def main():
         """
         player.start_game()
         player.guess_letter()
-        break
+        if player.word_complete():
+            print(f"You win! The word was: {word}\n")
+            break
+        if player.check_tries():
+            print(f"You lose! The word was: {word}\n")
+            break
     
 main()
 
