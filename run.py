@@ -73,7 +73,7 @@ class Snowy:
         if data not in self.word:
             self.tries -= 1
             print(
-                f"\nSorry that letter is not in the word. You have {self.tries}"
+                10*"\n", f"Sorry, that letter is not in the word. You have {self.tries}"
                 " more chances.")
 
         while data in self.word:
@@ -81,7 +81,7 @@ class Snowy:
             self.secret_word[i] = data
             self.word[i] = "."
             print(
-                f"\nGreat job! You have {self.tries}"
+                10*"\n", f"Great job! You have {self.tries}"
                 " more chances.")
             
     def word_complete(self):
