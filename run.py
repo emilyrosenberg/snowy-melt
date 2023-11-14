@@ -7,7 +7,7 @@ Get words, hints, and images from other .py files
 """
 
 import random
-from words_list import hints, word_hint, keys
+from words_list import word_hint
 # from words_list import word_hint
 from snowy_image import snowy_image
 
@@ -127,10 +127,15 @@ def main():
     # for word in words:
     #     word.upper()
   
-    for hint in hints:
-        hint.upper()
+    # for hint in hints:
+    #     hint.upper()
 
-    word = random.choice(keys).upper()
+    keys = list(word_hint.keys())
+
+    # word = random.choice(keys).upper()
+    word = keys[9].upper()
+    for i in word_hint:
+        hint = word_hint[i]
 
     player = Snowy(name, word, hint)
     while True: 
