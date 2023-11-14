@@ -6,9 +6,8 @@
 Get words, hints, and images from other .py files
 """
 
-import random
+# import random
 from words_list import word_hint
-# from words_list import word_hint
 from snowy_image import snowy_image
 
 class Snowy:
@@ -19,7 +18,7 @@ class Snowy:
 
     def __init__(self, name, word, hint):
         self.name = name
-        self.word = [x for x in word.upper()]
+        self.word = [x for x in word]
         self.hint = hint
         # Holds already-guessed letters
         self.guesses = []
@@ -121,19 +120,13 @@ def main():
     # Add code to press any key/or to do nothing unless enter is clicked
 
     """
-    Gets a word from the list of words and displays it in uppercase
+    Gets a word from the list and displays it in uppercase.
     """
-    # Useless function but I need a way to declare word and hint
-    # for word in words:
-    #     word.upper()
-  
-    # for hint in hints:
-    #     hint.upper()
-
     keys = list(word_hint.keys())
-
-    # word = random.choice(keys).upper()
     word = keys[9].upper()
+    """
+    Gets a hint from the list.
+    """
     for i in word_hint:
         hint = word_hint[i]
 
