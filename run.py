@@ -7,6 +7,7 @@ Get words, hints, and images from other .py files
 """
 
 # import random
+import keyboard
 from words_list import word_hint
 from snowy_image import snowy_image
 
@@ -115,17 +116,24 @@ def main():
             break
     
     print(f"\nHi {name}! To play, guess the letters in the mystery word.\nYou get 5 incorrect guesses before Snowy melts away...\n")
-        
-    start_game = input("Are you ready? Press Enter to start the game!\n")
+    
     # Add code to press any key/or to do nothing unless enter is clicked
+    # start_game = input("fAre you ready? Press Enter to start the game!\n")
+    # print("fAre you ready? Press any key to start the game!\n")
+    # keyboard.wait()
+    # print("You pressed a key")
+    print(f"Are you ready? Press Enter to start the game!\n")
+    input()
+    
 
+    # Code to get words and hints suggested by my mentor
     """
-    Gets a word from the list and displays it in uppercase.
+    Gets a word and displays it in uppercase.
     """
     keys = list(word_hint.keys())
     word = keys[9].upper()
     """
-    Gets a hint from the list.
+    Gets a hint.
     """
     for i in word_hint:
         hint = word_hint[i]
@@ -145,8 +153,9 @@ def main():
             print(f"\nSorry {name}, you lose. The word is: {word.upper()}\n")
             break
     
-    input(f"It's snowing... press Enter to play again\n")
+    input(f"Hey, it's snowing! Press Enter to play again.\n")
     # Add code to press any key/or to do nothing unless enter is clicked
     # Add code to play again
+    
 
 main()

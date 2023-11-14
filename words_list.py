@@ -28,6 +28,8 @@ Words and definitions adapted from Weather Words https://www.metoffice.gov.uk/we
 # 'An electric flash'
 # ]
 
+# Code to hold words and hints suggested by my mentor
+
 word_hint = {
 'fog': 'A cloud on the ground',
 'shovel': 'A hand tool',
