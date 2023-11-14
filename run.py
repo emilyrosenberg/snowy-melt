@@ -7,7 +7,7 @@ Get words, hints, and images from other .py files
 """
 
 # import random
-import keyboard
+# import keyboard
 from words_list import word_hint
 from snowy_image import snowy_image
 
