@@ -6,7 +6,8 @@
 Get words, hints, and images from other .py files
 """
 
-from words_list import words, hints
+import random
+from words_list import hints, word_hint, keys
 # from words_list import word_hint
 from snowy_image import snowy_image
 
@@ -123,11 +124,13 @@ def main():
     Gets a word from the list of words and displays it in uppercase
     """
     # Useless function but I need a way to declare word and hint
-    for word in words:
-        word.upper()
+    # for word in words:
+    #     word.upper()
   
     for hint in hints:
         hint.upper()
+
+    word = random.choice(keys).upper()
 
     player = Snowy(name, word, hint)
     while True: 
