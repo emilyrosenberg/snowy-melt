@@ -117,41 +117,43 @@ def main():
     
     input(f"Are you ready? Press Enter to start the game!\n")
     
-    """
-    Gets a random word/hint pair from the dictionary.
-    """
-    # Code to get a random pair suggested by tutoring (Rebecca) https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322
-    word, hint = random.choice(list(word_hint.items()))
-    word = word.upper()
+    while True:
+        """
+        Gets a random word/hint pair from the dictionary.
+        """
+        # Code to get a random pair suggested by tutoring (Rebecca) https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322
+        word, hint = random.choice(list(word_hint.items()))
+        word = word.upper()
 
-    player = Snowy(name, word, hint)
-    while True: 
-        """
-        Runs the game until the word is completed or there are no more tries.
-        """
-        player.start_game()
-        player.guess_letter()
-        if player.word_complete():
-            print(
+        player = Snowy(name, word, hint)
+        while True: 
             """
-                *     *
-            *      *    *
-             *       *
-               _|=|_   *
-            *  ('<')
-            >—(  o  )—<
-             (   o   )  *
-            (    o    )
-            -----------
+            Runs the game until the word is completed or there are no more tries.
             """
-            )
-            print(f"\nYou win, {name}! The word is: {word.upper()}\n")
-            break
-        if player.check_tries():
-            print(f"\nSorry {name}, you lose. The word is: {word.upper()}\n")
-            break
-    
-    input(f"Hey, it's snowing! Press Enter to play again.\n")
-    # Add code to play again
+            player.start_game()
+            player.guess_letter()
+            if player.word_complete():
+                print(
+                """
+                \n
+                    *     *
+                *      *    *
+                *       *
+                _|=|_   *
+                *  ('<')
+                >—(  o  )—<
+                (   o   )  *
+                (    o    )
+                -----------
+                """
+                )
+                print(f"\nYou win, {name}! The word is: {word.upper()}\n")
+                break
+            if player.check_tries():
+                print(f"\nSorry {name}, you lose. The word is: {word.upper()}\n")
+                break
+        
+        input(f"Hey, it's snowing! Press Enter to play again.\n")
+        # Add code to play again
     
 main()
