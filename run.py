@@ -118,7 +118,7 @@ def main():
     input(f"Are you ready? Press Enter to start the game!\n")
     
     """
-    Gets a random word/hint pair from the dictionary
+    Gets a random word/hint pair from the dictionary.
     """
     # Code to get a random pair suggested by tutoring (Rebecca) https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322
     word, hint = random.choice(list(word_hint.items()))
