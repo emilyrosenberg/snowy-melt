@@ -69,7 +69,7 @@ class Snowy:
         if data not in self.word:
             self.tries -= 1
             print(
-                10*"\n", f"Sorry, that letter is not in the word."
+                10*"\n", f"Sorry, that letter is not in the word.\n"
                 "You have {self.tries}"
                 " more chances.")
 
@@ -113,7 +113,7 @@ def main():
             break
 
     print(
-        f"\nHi {name}! To play, guess the letters in the mystery word."
+        f"\nHi {name}! To play, guess the letters in the mystery word.\n"
         "You get 5 incorrect guesses before Snowy melts away...\n")
 
     input(f"Are you ready? Press Enter to start the game!\n")
@@ -155,8 +155,8 @@ def main():
                 break
             if player.check_tries():
                 print(
-                    f"\nSorry {name}, you lose."
-                    "The word is: {word.upper()}\n")
+                    f"\nSorry {name}, you lose.\n"
+                    f"The word is: {word.upper()}\n")
                 break
 
         input(f"Hey, it's snowing! Press Enter to play again.\n")
