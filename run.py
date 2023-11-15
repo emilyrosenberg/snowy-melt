@@ -3,7 +3,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
 """
-Get words, hints, and images from other .py files
+Gets word/hint pairs and images from other .py files
 """
 import random
 # import keyboard
@@ -131,18 +131,6 @@ def main():
     # Code to get a random pair suggested by tutoring (Rebecca) https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322
     word, hint = random.choice(list(word_hint.items()))
     word = word.upper()
-
-    # Code to get words and hints suggested by my mentor
-    # """
-    # Gets a word from the d and displays it in uppercase.
-    # """
-    # keys = list(word_hint.keys())
-    # word = keys[9].upper()
-    # """
-    # Gets a hint from the dictionary.
-    # """
-    # for i in word_hint:
-    #     hint = word_hint[i]
 
     player = Snowy(name, word, hint)
     while True: 

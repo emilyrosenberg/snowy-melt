@@ -56,6 +56,9 @@ When the user clicks a letter, the game provides feedback. If the letter is in t
 End <br>
 After the mystery word is solved or the player runs out of guesses, the game provides feedback, and shows an option to play again.
 
+Picking a random pair:
+https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322
+
 ### Design
 I used Lucidchart to design the flow of this game's functions. <br> ![Flow chart](readme-images/flow-chart.png)
 
