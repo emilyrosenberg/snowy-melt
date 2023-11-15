@@ -120,14 +120,11 @@ def main():
     """
     Starts the game.
     """
-    # Help with loops from
-    # https://www.askpython.com/python/examples/restart-loop-in-python#:~:text=Restart%20a%20Nested%20Loop%20in%20Python&text=A%20nested%20loop%20is%20a,will%20understand%20this%20during%20implementation.
-
     while True:
         """
         Gets a random word/hint pair from the dictionary.
         """
-        # Code to get a random pair suggested by tutoring (Rebecca) https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322
+        # Code to get a random pair suggested by a resource from tutoring (Rebecca) 
         word, hint = random.choice(list(word_hint.items()))
         word = word.upper()
 

@@ -35,7 +35,7 @@ Happy coding! -->
 
 <!-- Mockup -->
 
-Snowy Melt is a mystery-word guessing game for one player. The player guesses letters to complete the word. With each wrong guess, Snowy the snowman melts away. <br>
+Snowy Melt is a mystery-word guessing game for one player. It is written as a Python command-line game. Based on a hint and the word length, the player guesses letters to complete the word. With each wrong guess, Snowy the snowman melts away.<br>
 The game is designed to be fun and entertaining for people of every age and ability.
 
 ## Features 
@@ -45,23 +45,19 @@ The game is designed to be fun and entertaining for people of every age and abil
 ### Current features
 
 Greeting <br>
-The game asks for the user's name, and explains how the game works. <br>
+The game asks for the user's name, shows a greeting, and explains the rules. <br>
 
 Start <br>
-At the beginning of the game, the user sees the whole snowman, the blank lines where the letters representing the mystery word, and a prompt to guess a letter. <br>
+A random word/hint pair is pulled from the dictionary. The user sees the whole snowman, the underscores representing letters in the mystery word, a hint, and a prompt to guess a letter. <br>
 
 Play <br>
-When the user clicks a letter, the game provides feedback. If the letter is in the word, it shows on the board. If not, the snowman melts down one level. <br>
+When the user guesses a letter, the input is validated and the game provides feedback. If the letter is in the word, it is added to the board. If not, the snowman melts down one level. <br>
 
 End <br>
-After the mystery word is solved or the player runs out of guesses, the game provides feedback, and shows an option to play again.
-
-Picking a random pair:
-https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322
+After the mystery word is solved or the player runs out of guesses, the game shows win or lose feedback, and gives the user an option to play again.
 
 ### Design
 I used Lucidchart to design the flow of this game's functions. <br> ![Flow chart](readme-images/flow-chart.png)
-
 
 <!-- - __Navigation Bar__
 
@@ -117,7 +113,8 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ### Future implementations
 
-<!-- - Another feature idea -->
+- Feedback about how many guesses the user took to win
+- A more advanced scoring system
 
 ## Technologies used
 Python <br>
@@ -128,6 +125,19 @@ Git <br>
 Gitpod
 
 ## Testing 
+This game was tested throughout development in the terminal in VS Code, and in a deployed version using Heroku.
+
+### Bugs
+Here are a few of the bugs I dealt with during development.
+- Press any key to start the game <br>
+I researched a tried several ways to implement this, including import keyboard and using various functions which did not work for me. But then I found other advice arguing that using the input() function was probably the best solution in Python. The result was that the user presses Enter to start the game and play again.
+- Get word/hint pairs from a dictionary <br>
+Originally I had a list of words and a list of hints, but I needed them to be connected so that the pair showed in the same round of the game. My mentor helped me create a dictionary of pairs instead of two lists. Code Institute tutoring (Rebeccca) directed me toward a [resource](https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322) so that I could get a random pair first. Then I figured out how to get the word and the hint from there, and send them to the right place.
+- The upper() function <br>
+In order for the guessed letter to be validated, both the guess and the letters in the word must be uppercase. At first I didn't understand where this function should go. I did a lot of trial and error, and printing. After I changed the functionality of getting the word/hint pairs, I had to figure it out again.
+- Re-starting the game <br>
+I researched more about how to re-start the game using a while loop, and found [this resource](https://www.askpython.com/python/examples/restart-loop-in-python#:~:text=Restart%20a%20Nested%20Loop%20in%20Python&text=A%20nested%20loop%20is%20a,will%20understand%20this%20during%20implementation.) helpful.
+
 
 <!-- In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -164,6 +174,9 @@ The live link can be found here - https://code-institute-org.github.io/love-runn
 <!-- Screenshots -->
 
 ## Credits 
+
+Picking a random pair:
+https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322
 
 <!-- In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 
