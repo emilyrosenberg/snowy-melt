@@ -132,7 +132,19 @@ def main():
         player.start_game()
         player.guess_letter()
         if player.word_complete():
-            # Add code to print first (unmelted) Snowy image
+            print(
+            """
+                *     *
+            *      *    *
+             *       *
+               _|=|_   *
+            *  ('<')
+            >—(  o  )—<
+             (   o   )  *
+            (    o    )
+            -----------
+            """
+            )
             print(f"\nYou win, {name}! The word is: {word.upper()}\n")
             break
         if player.check_tries():
