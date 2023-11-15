@@ -5,8 +5,7 @@
 """
 Get words, hints, and images from other .py files
 """
-
-# import random
+import random
 # import keyboard
 from words_list import word_hint
 from snowy_image import snowy_image
@@ -122,21 +121,28 @@ def main():
     # print("fAre you ready? Press any key to start the game!\n")
     # keyboard.wait()
     # print("You pressed a key")
-    print(f"Are you ready? Press Enter to start the game!\n")
-    input()
+    # print(f"Are you ready? Press Enter to start the game!\n")
+    # input()
+    input(f"Are you ready? Press Enter to start the game!\n")
     
+    """
+    Gets a random word/hint pair from the dictionary
+    """
+    # Code to get a random pair suggested by tutoring (Rebecca) https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322
+    word, hint = random.choice(list(word_hint.items()))
+    word = word.upper()
 
     # Code to get words and hints suggested by my mentor
-    """
-    Gets a word and displays it in uppercase.
-    """
-    keys = list(word_hint.keys())
-    word = keys[9].upper()
-    """
-    Gets a hint.
-    """
-    for i in word_hint:
-        hint = word_hint[i]
+    # """
+    # Gets a word from the d and displays it in uppercase.
+    # """
+    # keys = list(word_hint.keys())
+    # word = keys[9].upper()
+    # """
+    # Gets a hint from the dictionary.
+    # """
+    # for i in word_hint:
+    #     hint = word_hint[i]
 
     player = Snowy(name, word, hint)
     while True: 
@@ -157,5 +163,4 @@ def main():
     # Add code to press any key/or to do nothing unless enter is clicked
     # Add code to play again
     
-
 main()
