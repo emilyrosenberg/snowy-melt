@@ -1,13 +1,10 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-
 """
 Gets word/hint pairs and images from other .py files
 """
 import random
 from words_list import word_hint
 from snowy_image import snowy_image
+
 
 class Snowy:
     # Inspired by Hangman Game by Klara Martinsson
@@ -31,7 +28,7 @@ class Snowy:
         print(*self.guesses)
         print(f"\nHint: ")
         print(self.hint)
-      
+
     def validate_guess(self, data):
         """
         Checks the input to make sure it is one letter.
@@ -72,7 +69,8 @@ class Snowy:
         if data not in self.word:
             self.tries -= 1
             print(
-                10*"\n", f"Sorry, that letter is not in the word. You have {self.tries}"
+                10*"\n", f"Sorry, that letter is not in the word."
+                "You have {self.tries}"
                 " more chances.")
 
         while data in self.word:
@@ -82,7 +80,7 @@ class Snowy:
             print(
                 10*"\n", f"Great job! You have {self.tries}"
                 " more chances.")
-            
+
     def word_complete(self):
         """
         Checks for remaining "_".
@@ -98,6 +96,7 @@ class Snowy:
             self.start_game()
             return True
 
+
 def main():
 
     """
@@ -109,14 +108,16 @@ def main():
     while True:
         name = input("What's your name? \n")
         if not name.isalpha():
-            print(f'\nInvalid name, please enter your name.')
+            print(f"\nInvalid name, please enter your name.")
         else:
             break
-    
-    print(f"\nHi {name}! To play, guess the letters in the mystery word.\nYou get 5 incorrect guesses before Snowy melts away...\n")
-    
+
+    print(
+        f"\nHi {name}! To play, guess the letters in the mystery word."
+        "You get 5 incorrect guesses before Snowy melts away...\n")
+
     input(f"Are you ready? Press Enter to start the game!\n")
-    
+
     """
     Starts the game.
     """
@@ -124,38 +125,41 @@ def main():
         """
         Gets a random word/hint pair from the dictionary.
         """
-        # Code to get a random pair suggested by a resource from tutoring (Rebecca) 
+        # Code suggested by a resource from tutoring (Rebecca)
         word, hint = random.choice(list(word_hint.items()))
         word = word.upper()
 
         player = Snowy(name, word, hint)
-        while True: 
+        while True:
             """
-            Runs the game until the word is completed or there are no more tries.
+            Runs game until the word is complete or 5x wrong guesses.
             """
             player.start_game()
             player.guess_letter()
             if player.word_complete():
                 print(
-                """
-                \n
-                    *     *
-                *      *    *
-                  *       *
-                   _|=|_   *
-                *  ('<')
-                >—(  o  )—<
-                 (   o   )  *
-                (    o    )
-                -----------
-                """
+                    """
+                    \n
+                        *     *
+                    *      *    *
+                      *       *
+                       _|=|_   *
+                    *  ('<')
+                    >—(  o  )—<
+                     (   o   )  *
+                    (    o    )
+                    -----------
+                    """
                 )
                 print(f"\nYou win, {name}! The word is: {word.upper()}\n")
                 break
             if player.check_tries():
-                print(f"\nSorry {name}, you lose. The word is: {word.upper()}\n")
+                print(
+                    f"\nSorry {name}, you lose."
+                    "The word is: {word.upper()}\n")
                 break
-        
+
         input(f"Hey, it's snowing! Press Enter to play again.\n")
-    
+
+
 main()
