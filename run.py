@@ -117,6 +117,12 @@ def main():
     
     input(f"Are you ready? Press Enter to start the game!\n")
     
+    """
+    Starts the game.
+    """
+    # Help with loops from
+    # https://www.askpython.com/python/examples/restart-loop-in-python#:~:text=Restart%20a%20Nested%20Loop%20in%20Python&text=A%20nested%20loop%20is%20a,will%20understand%20this%20during%20implementation.
+
     while True:
         """
         Gets a random word/hint pair from the dictionary.
@@ -138,11 +144,11 @@ def main():
                 \n
                     *     *
                 *      *    *
-                *       *
-                _|=|_   *
+                  *       *
+                   _|=|_   *
                 *  ('<')
                 >—(  o  )—<
-                (   o   )  *
+                 (   o   )  *
                 (    o    )
                 -----------
                 """
@@ -154,6 +160,5 @@ def main():
                 break
         
         input(f"Hey, it's snowing! Press Enter to play again.\n")
-        # Add code to play again
     
 main()
