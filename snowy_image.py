@@ -1,7 +1,6 @@
 def snowy_image(tries):
     snowy = [
         """
-        \n
             *      *
           *     *      *
             *     *   *   
@@ -16,12 +15,10 @@ def snowy_image(tries):
         \n
         \n
         \n
-        \n
            _|=|_
         -----------
         """,
         """
-        \n
         \n
         \n
         \n
@@ -31,7 +28,6 @@ def snowy_image(tries):
         -----------
         """,
         """
-        \n
         \n
         \n
         \n
@@ -41,7 +37,6 @@ def snowy_image(tries):
         -----------
         """,
         """
-        \n
         \n
         \n
            _|=|_
@@ -51,7 +46,6 @@ def snowy_image(tries):
         -----------
         """,
         """
-        \n
         \n
            _|=|_
            ('<')
