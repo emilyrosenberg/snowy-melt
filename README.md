@@ -138,7 +138,6 @@ In order for the guessed letter to be validated, both the guess and the letters 
 - Re-starting the game <br>
 I researched more about how to re-start the game using a while loop, and found [this resource](https://www.askpython.com/python/examples/restart-loop-in-python#:~:text=Restart%20a%20Nested%20Loop%20in%20Python&text=A%20nested%20loop%20is%20a,will%20understand%20this%20during%20implementation.) helpful.
 
-
 <!-- In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
@@ -147,13 +146,9 @@ You should also mention in this section any interesting bugs or problems you dis
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here. -->
 
-
 ### Code Validation 
 
-<!-- - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-running-2.0%2Findex.html)
-- CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-running-2.0%252Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css) -->
+I validated the app with the [Code Institute Python Linter](https://pep8ci.herokuapp.com/). The errors were blank spaces, incorrect indentation, and lines that were too long. There are now no errors.<br> ![Linter result](readme-images/linter-result.png)
 
 ### Unfixed Bugs
 
@@ -161,22 +156,21 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ## Deployment
 
-<!-- This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
-
-- The site was deployed to GitHub pages. The steps to deploy are as follows: 
-  - In the GitHub repository, navigate to the Settings tab 
-  - From the source section drop-down menu, select the Master Branch
-  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
-
-The live link can be found here - https://code-institute-org.github.io/love-running-2.0/index.html  -->
+This app was deployed using Heroku. The live link can be found [here](https://snowy-melt-ad37e9d6291f.herokuapp.com/).
 
 ## Finished game
 <!-- Screenshots -->
 
 ## Credits 
+This game was inspired by the [Hangman Game by Klara Martinsson](https://github.com/KlaraMartinsson/hangman-game/tree/main), provided as an example by my cohort facilitator. I started with this example to create the structure of my project, and learned a lot by following this logic and adding my own ideas and functionality.
 
-Picking a random pair:
+Picking a random pair, resource provided by CI tutoring (Rebecca):
 https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322
+
+Snowman ascii art inspo https://www.momsarefrommars.com/moms-blog/category/ascii%20art
+and here https://amgrubb.github.io/csc111/lab-5-loopFunc.html
+
+Snowman hangman game inspo https://rhodygirlresources.com/product/digital-sight-word-games-snowman-melt/
 
 <!-- In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 

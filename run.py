@@ -56,9 +56,7 @@ class Snowy:
             guess = input("\nGuess a letter: \n").upper()
             if self.validate_guess(guess):
                 break
-        # Adds the guessed letter to the list of guesses
         self.guesses.append(guess)
-        # Checks if the letter is in the word
         self.check_letter(guess)
 
     def check_letter(self, data):
