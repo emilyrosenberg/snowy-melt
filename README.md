@@ -45,16 +45,16 @@ The game is designed to be fun and entertaining for people of every age and abil
 ### Current features
 
 Greeting <br>
-The game asks for the user's name, shows a greeting, and explains the rules. <br>
+At the beginning of the game, the user inputs their name. Then they see a persoanlized greeting and an explanation of the rules.<br>
 
 Start <br>
-A random word/hint pair is pulled from the dictionary. The user sees the whole snowman, the underscores representing letters in the mystery word, a hint, and a prompt to guess a letter. <br>
+A random word/hint pair is pulled from the dictionary. The user sees the snowman character, underscores representing letters in the mystery word, a hint to help them guess, and a prompt to guess a letter. <br>
 
 Play <br>
 When the user guesses a letter, the input is validated and the game provides feedback. If the letter is in the word, it is added to the board. If not, the snowman melts down one level. <br>
 
 End <br>
-After the mystery word is solved or the player runs out of guesses, the game shows win or lose feedback, and gives the user an option to play again.
+After the mystery word is solved or the player runs out of guesses, the game shows win or lose feedback with special graphics for each, and gives the user an option to play again.
 
 ### Design
 I used Lucidchart to design the flow of this game's functions. <br> ![Flow chart](readme-images/flow-chart.png)
@@ -162,15 +162,16 @@ This app was deployed using Heroku. The live link can be found [here](https://sn
 <!-- Screenshots -->
 
 ## Credits 
-This game was inspired by the [Hangman Game by Klara Martinsson](https://github.com/KlaraMartinsson/hangman-game/tree/main), provided as an example by my cohort facilitator. I started with this example to create the structure of my project, and learned a lot by following this logic and adding my own ideas and functionality.
+- This game was inspired by the [Hangman Game by Klara Martinsson](https://github.com/KlaraMartinsson/hangman-game/tree/main) which was provided as an example by my cohort facilitator, David Calikes. I used this example to create the structure of my project, and added my own ideas and functionality.
+- The idea for a word-guessing game featuring a snowman came from [this website](https://rhodygirlresources.com/product/digital-sight-word-games-snowman-melt/).
+- The ascii character was inspired by images [here](https://amgrubb.github.io/csc111/lab-5-loopFunc.html) and [here](https://www.momsarefrommars.com/moms-blog/category/ascii%20art).
+- The words and definitions were adapted from content found in [Weather Words](https://www.metoffice.gov.uk/weather/learn-about/met-office-for-schools/other-content/other-resources/weather-words) and [EnglishClub Weather Vocabulary](https://www.englishclub.com/vocabulary/weather-vocabulary.php).
 
-Picking a random pair, resource provided by CI tutoring (Rebecca):
-https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322
+Thank you to my mentor,
 
-Snowman ascii art inspo https://www.momsarefrommars.com/moms-blog/category/ascii%20art
-and here https://amgrubb.github.io/csc111/lab-5-loopFunc.html
+This [resource](https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322) for accessing a random pair was provided by CI tutoring (Rebecca).
 
-Snowman hangman game inspo https://rhodygirlresources.com/product/digital-sight-word-games-snowman-melt/
+
 
 <!-- In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 
