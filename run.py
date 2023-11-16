@@ -24,6 +24,7 @@ class Snowy:
 
     def start_game(self):
         print(snowy_image(self.tries))
+        # Spaces out the letters and underscores
         print(*self.secret_word)
         print(*self.guesses)
         print(f"\nHint: ")
@@ -67,16 +68,20 @@ class Snowy:
         if data not in self.word:
             self.tries -= 1
             print(10*"\n")
-            print(f"Sorry, that letter is not in the word.\n"
-                f"You have {self.tries} more chances.")
+            print(
+                f"Sorry, that letter is not in the word.\n"
+                f"You have {self.tries} more chances."
+            )
 
         while data in self.word:
             i = self.word.index(data)
             self.secret_word[i] = data
             self.word[i] = "."
             print(10*"\n")
-            print(f"Great job! You have {self.tries}"
-                " more chances.")
+            print(
+                f"Great job! You have {self.tries}"
+                f" more chances."
+            )
 
     def word_complete(self):
         """
@@ -95,13 +100,13 @@ class Snowy:
 
 
 def main():
+# Inspired by Hangman Game by Klara Martinsson
 
     """
     Welcomes the player by name, shows the rules.
     """
     print("\nWelcome to Snowy Melt!")
 
-    # Name validation from Hangman Game by Klara Martinsson
     while True:
         name = input("What's your name? \n")
         if not name.isalpha():

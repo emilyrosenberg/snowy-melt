@@ -57,11 +57,13 @@ End <br>
 After the mystery word is solved or the player runs out of guesses, the game shows win or lose feedback with special graphics for each, and gives the user an option to play again.
 
 ### Design
+I designed this game with a weather theme. In a small, simple game like this, a theme makes it more cohesive and fun for the user. It is meant to be entertaining for anyone, so the words are all different lengths, and some of the words and hints are easier than others. The user might not win every round, but the game is designed so that they will always discover something quirky and enjoyable! <br>
 I used Lucidchart to design the flow of this game's functions. <br> ![Flow chart](readme-images/flow-chart.png)<br>
-I designed this game with a weather theme. In a small, simple game like this, a theme makes it more cohesive and fun for the user. It is meant to be entertaining for anyone, so the words are all different lengths, and some of the words and hints are easier than others. The user might not win every round, but the game is designed so that they will always discover something quirky and enjoyable!
+I designed this character, "Snowy," based on two different ascii images that I found online (credited below).<br>
+![Snowy](readme-images/snowy.png)
 
 ### Future implementations
-
+In the future I would like to add more features to this game. For instance:
 - Feedback about how many guesses the user took to win
 - A more advanced scoring system
 - Levels of difficulty
@@ -91,6 +93,7 @@ Originally I had a list of words and a separate list of hints, but I needed them
 In order for the guessed letter to be validated, both the guess and the letters in the word must be uppercase. At first I didn't understand where this function should go. I did a lot of trial and error, and printing. After I changed the functionality of getting the word/hint pairs, I had to figure it out again.
 - Re-starting the game <br>
 I researched more about how to re-start the game using a while loop, and found [this resource](https://www.askpython.com/python/examples/restart-loop-in-python#:~:text=Restart%20a%20Nested%20Loop%20in%20Python&text=A%20nested%20loop%20is%20a,will%20understand%20this%20during%20implementation.) helpful.
+- After running the code through the linter and fixing errors, I tested it again and noticed a space at the beginning of some lines of feedback. I fixed this by creating two separate print statements: one for the lines that create space in the terminal for the next guess, and one for the feedback about the correct/incorrect letter and remaining tries.
 
 <!-- In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
@@ -106,35 +109,17 @@ I validated the code in the three .py files with the [Code Institute Python Lint
 
 ## Deployment
 
-This app was deployed using Heroku. The deployment terminal is 80 columns by 24 rows. The live link can be found [here](https://snowy-melt-ad37e9d6291f.herokuapp.com/).
+This app was deployed using Github and Heroku. The deployment terminal is 80 columns by 24 rows. The live link can be found [here](https://snowy-melt-ad37e9d6291f.herokuapp.com/).
 
 ## Finished game
-<!-- Screenshots -->
+Here are some screenshots of the finished deployed game. <br>
+![Start](readme-images/screenshot0.png) ![First guess](readme-images/screenshot1.png) ![Next guess](readme-images/screenshot2.png) ![Guess again](readme-images/screenshot3.png) ![Lose](readme-images/screenshot4.png) ![Win](readme-images/screenshot5.png)
 
 ## Credits 
-- This game was inspired by the [Hangman Game by Klara Martinsson](https://github.com/KlaraMartinsson/hangman-game/tree/main) which was provided as an example by my cohort facilitator, David Calikes. I used this example to create the structure of my project, and added my own ideas and functionality.
+- This game was inspired by the [Hangman Game by Klara Martinsson](https://github.com/KlaraMartinsson/hangman-game/tree/main) which was provided as an example by my cohort facilitator, David Calikes. I used this example to create the structure of my project, and I'm grateful to the coder for helping me learn!
 - The idea for a word-guessing game featuring a snowman came from [this website](https://rhodygirlresources.com/product/digital-sight-word-games-snowman-melt/).
 - The ascii character was inspired by images [here](https://amgrubb.github.io/csc111/lab-5-loopFunc.html) and [here](https://www.momsarefrommars.com/moms-blog/category/ascii%20art).
 - The words and definitions were adapted from content found in [Weather Words](https://www.metoffice.gov.uk/weather/learn-about/met-office-for-schools/other-content/other-resources/weather-words) and [EnglishClub Weather Vocabulary](https://www.englishclub.com/vocabulary/weather-vocabulary.php).
 - This [resource](https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322) for accessing a random pair was provided by CI tutoring (Rebecca).
 - I would like to thank my Code Institute mentor, Adegbenga Adeye, for walking me through new information with patient support. <br>
 - Thanks to my cohort facilitator, David Calikes, for kind and helpful reassurance during this project, and great ideas for future implementations.
-
-<!-- Congratulations on completing your Readme, you have made another big stride in the direction of being a developer! -->
-
-<!-- ## Other General Project Advice -->
-
-<!-- Below you will find a couple of extra tips that may be helpful when completing your project. Remember that each of these projects will become part of your final portfolio so it’s important to allow enough time to showcase your best work! 
-
-- One of the most basic elements of keeping a healthy commit history is with the commit message. When getting started with your project, read through [this article](https://chris.beams.io/posts/git-commit/) by Chris Beams on How to Write  a Git Commit Message 
-  - Make sure to keep the messages in the imperative mood 
-
-- When naming the files in your project directory, make sure to consider meaningful naming of files, point to specific names and sections of content.
-  - For example, instead of naming an image used ‘image1.png’ consider naming it ‘landing_page_img.png’. This will ensure that there are clear file paths kept. 
-
-- Do some extra research on good and bad coding practices, there are a handful of useful articles to read, consider reviewing the following list when getting started:
-  - [Writing Your Best Code](https://learn.shayhowe.com/html-css/writing-your-best-code/)
-  - [HTML & CSS Coding Best Practices](https://medium.com/@inceptiondj.info/html-css-coding-best-practice-fadb9870a00f)
-  - [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#General)
-
-Getting started with your Portfolio Projects can be daunting, planning your project can make it a lot easier to tackle, take small steps to reach the final outcome and enjoy the process!  -->
