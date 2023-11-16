@@ -36,7 +36,7 @@ Happy coding! -->
 <!-- Mockup -->
 
 Snowy Melt is a mystery-word guessing game for one player. It is written as a Python command-line game. Based on a hint and the word length, the player guesses letters to complete the word. With each wrong guess, Snowy the snowman melts away.<br>
-The game is designed to be fun and entertaining for people of every age and ability.
+The game is designed to be fun and entertaining for people of every age and ability. You can find it [here](https://snowy-melt-ad37e9d6291f.herokuapp.com/).
 
 ## Features 
 
@@ -57,64 +57,15 @@ End <br>
 After the mystery word is solved or the player runs out of guesses, the game shows win or lose feedback with special graphics for each, and gives the user an option to play again.
 
 ### Design
-I used Lucidchart to design the flow of this game's functions. <br> ![Flow chart](readme-images/flow-chart.png)
-
-<!-- - __Navigation Bar__
-
-  - Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Gallery and Sign Up page and is identical in each page to allow for easy navigation.
-  - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
-
-![Nav Bar](https://github.com/lucyrush/readme-template/blob/master/media/love_running_nav.png)
-
-- __The landing page image__
-
-  - The landing includes a photograph with text overlay to allow the user to see exactly which location this site would be applicable to. 
-  - This section introduces the user to Love Running with an eye catching animation to grab their attention
-
-![Landing Page](https://github.com/lucyrush/readme-template/blob/master/media/love_running_landing.png)
-
-- __Club Ethos Section__
-
-  - The club ethos section will allow the user to see the benefits of joining the Love Running meetups, as well as the benefits of running overall. 
-  - This user will see the value of signing up for the Love Running meetups. This should encourage the user to consider running as their form of exercise. 
-
-![Club Ethos](https://github.com/lucyrush/readme-template/blob/master/media/love_running_ethos.png)
-
-- __Meetup Times section__
-
-  - This section will allow the user to see exactly when the meetups will happen, where they will be located and how long the run will be in kilometers. 
-  - This section will be updated as these times change to keep the user up to date. 
-
-![Meetup Times](https://github.com/lucyrush/readme-template/blob/master/media/love_running_times.png)
-
-- __The Footer__ 
-
-  - The footer section includes links to the relevant social media sites for Love Running. The links will open to a new tab to allow easy navigation for the user. 
-  - The footer is valuable to the user as it encourages them to keep connected via social media
-
-![Footer](https://github.com/lucyrush/readme-template/blob/master/media/love_running_footer.png)
-
-- __Gallery__
-
-  - The gallery will provide the user with supporting images to see what the meet ups look like. 
-  - This section is valuable to the user as they will be able to easily identify the types of events the organisation puts together. 
-
-![Gallery](https://github.com/lucyrush/readme-template/blob/master/media/love_running_gallery.png)
-
-- __The Sign Up Page__
-
-  - This page will allow the user to get signed up to Love Running to start their running journey with the community. The user will be able specify if they would like to take part in road, trail or both types of running. The user will be asked to submit their full name and email address. 
-
-![Sign Up](https://github.com/lucyrush/readme-template/blob/master/media/love_running_signup.png)
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future: -->
+I used Lucidchart to design the flow of this game's functions. <br> ![Flow chart](readme-images/flow-chart.png)<br>
+I designed this game with a weather theme. In a small, simple game like this, a theme makes it more cohesive and fun for the user. It is meant to be entertaining for anyone, so the words are all different lengths, and some of the words and hints are easier than others. The user might not win every round, but the game is designed so that they will always discover something quirky and enjoyable!
 
 ### Future implementations
 
 - Feedback about how many guesses the user took to win
 - A more advanced scoring system
+- Levels of difficulty
+- Different themes for the words and images
 
 ## Technologies used
 Python <br>
@@ -125,14 +76,17 @@ Git <br>
 Gitpod
 
 ## Testing 
-This game was tested throughout development in the terminal in VS Code, and in a deployed version using Heroku.
+This game was tested throughout development in the terminal in VS Code. It was deployed and tested using Heroku.
+
+### Functionality
+The game is written in a run.py file, and the images and word/hint pairs are stored in two other .py files. These files are imported into the main file, which gets a random wod/hint pair for each round, and iterates through the images to show the user the visual of a melting snowman. This functionality is designed to be simple and to run without errors.
 
 ### Bugs
-Here are a few of the bugs I dealt with during development.
+Here are a few of the bugs I fixed during development.
 - Press any key to start the game <br>
-I researched a tried several ways to implement this, including import keyboard and using various functions which did not work for me. But then I found other advice arguing that using the input() function was probably the best solution in Python. The result was that the user presses Enter to start the game and play again.
+I researched and tried several ways to implement this, including "import keyboard" and using various functions which did not work for me. But then I found other advice arguing that using the "input()" function was probably the best solution in Python. The result is that in the finished game the user presses Enter to start the game and to play again.
 - Get word/hint pairs from a dictionary <br>
-Originally I had a list of words and a list of hints, but I needed them to be connected so that the pair showed in the same round of the game. My mentor helped me create a dictionary of pairs instead of two lists. Code Institute tutoring (Rebeccca) directed me toward a [resource](https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322) so that I could get a random pair first. Then I figured out how to get the word and the hint from there, and send them to the right place.
+Originally I had a list of words and a separate list of hints, but I needed them to be connected so that the pair showed in the same round of the game. My mentor helped me create a dictionary of pairs instead of two lists. Code Institute tutoring (Rebeccca) directed me toward a [resource](https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322) so that I could get a random pair first. Then I figured out how to get the word and the hint from there, and send them to the right place.
 - The upper() function <br>
 In order for the guessed letter to be validated, both the guess and the letters in the word must be uppercase. At first I didn't understand where this function should go. I did a lot of trial and error, and printing. After I changed the functionality of getting the word/hint pairs, I had to figure it out again.
 - Re-starting the game <br>
@@ -148,15 +102,11 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ### Code Validation 
 
-I validated the app with the [Code Institute Python Linter](https://pep8ci.herokuapp.com/). The errors were blank spaces, incorrect indentation, and lines that were too long. There are now no errors.<br> ![Linter result](readme-images/linter-result.png)
-
-### Unfixed Bugs
-
-<!-- You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.  -->
+I validated the code in the three .py files with the [Code Institute Python Linter](https://pep8ci.herokuapp.com/). The errors were blank spaces, incorrect indentation, and lines that were too long. There are now no errors.<br> Code in run.py: ![Linter result1](readme-images/linter-result1.png)<br>Code in snowy_images: ![Linter result2](readme-images/linter-result2.png)<br>Code in words_list: ![Linter result3](readme-images/linter-result3.png)<br>
 
 ## Deployment
 
-This app was deployed using Heroku. The live link can be found [here](https://snowy-melt-ad37e9d6291f.herokuapp.com/).
+This app was deployed using Heroku. The deployment terminal is 80 columns by 24 rows. The live link can be found [here](https://snowy-melt-ad37e9d6291f.herokuapp.com/).
 
 ## Finished game
 <!-- Screenshots -->
@@ -166,30 +116,11 @@ This app was deployed using Heroku. The live link can be found [here](https://sn
 - The idea for a word-guessing game featuring a snowman came from [this website](https://rhodygirlresources.com/product/digital-sight-word-games-snowman-melt/).
 - The ascii character was inspired by images [here](https://amgrubb.github.io/csc111/lab-5-loopFunc.html) and [here](https://www.momsarefrommars.com/moms-blog/category/ascii%20art).
 - The words and definitions were adapted from content found in [Weather Words](https://www.metoffice.gov.uk/weather/learn-about/met-office-for-schools/other-content/other-resources/weather-words) and [EnglishClub Weather Vocabulary](https://www.englishclub.com/vocabulary/weather-vocabulary.php).
+- This [resource](https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322) for accessing a random pair was provided by CI tutoring (Rebecca).
+- I would like to thank my Code Institute mentor, Adegbenga Adeye, for walking me through new information with patient support. <br>
+- Thanks to my cohort facilitator, David Calikes, for kind and helpful reassurance during this project, and great ideas for future implementations.
 
-Thank you to my mentor,
-
-This [resource](https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322) for accessing a random pair was provided by CI tutoring (Rebecca).
-
-
-
-<!-- In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-
-You can break the credits section up into Content and Media, depending on what you have included in your project.  -->
-
-### Content 
-
-<!-- - The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/) -->
-
-### Media
-
-<!-- - The photos used on the home and sign up page are from This Open Source site
-- The images used for the gallery page were taken from this other open source site
-
-
-Congratulations on completing your Readme, you have made another big stride in the direction of being a developer!  -->
+<!-- Congratulations on completing your Readme, you have made another big stride in the direction of being a developer! -->
 
 <!-- ## Other General Project Advice -->
 
