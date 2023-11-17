@@ -1,39 +1,6 @@
-<!-- ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
-
-## Reminders
-
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding! -->
-
 # ❄️ Snowy Melt
 
-<!-- Mockup -->
+![Mockup on different devices, created with Techsini.](readme-images/mockup.png)
 
 Snowy Melt is a mystery-word guessing game for one player. It is written as a Python command-line game. Based on a hint and the word length, the player guesses letters to complete the word. With each wrong guess, Snowy the snowman melts away.<br>
 The game is designed to be fun and entertaining for people of every age and ability. You can find it [here](https://snowy-melt-ad37e9d6291f.herokuapp.com/).
@@ -109,7 +76,7 @@ I validated the code in the three .py files with the [Code Institute Python Lint
 
 ## Deployment
 
-This app was deployed using Github and Heroku. The deployment terminal is 80 columns by 24 rows. The live link can be found [here](https://snowy-melt-ad37e9d6291f.herokuapp.com/).
+This game was deployed using Github and Heroku. The deployment terminal is 80 columns by 24 rows, and the game was designed to fit this format. The live link can be found [here](https://snowy-melt-ad37e9d6291f.herokuapp.com/).
 
 ## Finished game
 Here are some screenshots of the finished deployed game. <br>
@@ -121,5 +88,5 @@ Here are some screenshots of the finished deployed game. <br>
 - The ascii character was inspired by images [here](https://amgrubb.github.io/csc111/lab-5-loopFunc.html) and [here](https://www.momsarefrommars.com/moms-blog/category/ascii%20art).
 - The words and definitions were adapted from content found in [Weather Words](https://www.metoffice.gov.uk/weather/learn-about/met-office-for-schools/other-content/other-resources/weather-words) and [EnglishClub Weather Vocabulary](https://www.englishclub.com/vocabulary/weather-vocabulary.php).
 - This [resource](https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322) for accessing a random pair was provided by CI tutoring (Rebecca).
-- I would like to thank my Code Institute mentor, Adegbenga Adeye, for walking me through new information with patient support. <br>
+- I would like to thank my Code Institute mentor, Adegbenga Adeye, for ideas, patience, and support. <br>
 - Thanks to my cohort facilitator, David Calikes, for kind and helpful reassurance during this project, and great ideas for future implementations.
