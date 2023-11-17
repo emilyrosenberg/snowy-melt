@@ -49,7 +49,7 @@ Gitpod
 This game was tested throughout development in the terminal in VS Code. It was deployed and tested using Heroku.
 
 ### Functionality
-The game is written in a run.py file, and the images and word/hint pairs are stored in two other .py files. These files are imported into the main file, which gets a random wod/hint pair for each round, and iterates through the images to show the user the visual of a melting snowman. This functionality is designed to be simple and to run without errors.
+The game is written in a run.py file, and the images and word/hint pairs are stored in two other .py files. These files are imported into the main file, which gets a random word/hint pair for each round, and iterates through the images to show the user the visual of a melting snowman. This functionality is designed to be simple and to run without errors.
 
 ### Bugs
 Here are a few of the bugs I fixed during development.
@@ -61,7 +61,8 @@ Originally I had a list of words and a separate list of hints, but I needed them
 In order for the guessed letter to be validated, both the guess and the letters in the word must be uppercase. At first I didn't understand where this function should go. I did a lot of trial and error, and printing. After I changed the functionality of getting the word/hint pairs, I had to figure it out again.
 - Re-starting the game <br>
 I researched more about how to re-start the game using a while loop, and found [this resource](https://www.askpython.com/python/examples/restart-loop-in-python#:~:text=Restart%20a%20Nested%20Loop%20in%20Python&text=A%20nested%20loop%20is%20a,will%20understand%20this%20during%20implementation.) helpful.
-- After running the code through the linter and fixing errors, I tested it again and noticed a space at the beginning of some lines of feedback. I fixed this by creating two separate print statements: one for the lines that create space in the terminal for the next guess, and one for the feedback about the correct/incorrect letter and remaining tries.
+- Extra space at the beginning of printed text <br>
+After running the code through the linter and fixing errors, I tested it again and noticed a space at the beginning of some lines of feedback. I fixed this by creating two separate print statements: one for the lines that create space in the terminal for the next guess, and one for the feedback about the correct/incorrect letter and remaining tries.
 
 ### Code Validation 
 
