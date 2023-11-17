@@ -12,10 +12,10 @@ The game is designed to be fun for people of every age and ability. Whether the 
 ### Current features
 
 Greeting <br>
-At the beginning of the game, the user inputs their name. Then they see a personalized greeting and an explanation of the rules.<br>
+At the beginning of the game, the user is introduced to the game's purpose and their goal. After they input their name, they see a personalized greeting, an explanation of the rules, and a prompt to press Enter to start the game.<br>
 
 Start <br>
-A random word/hint pair is pulled from the dictionary. The user sees the snowman character, underscores representing letters in the mystery word, a hint to help them guess, and a prompt to guess a letter. <br>
+A random word/hint pair is pulled from the dictionary. The user sees the snowman character, the underscores representing letters in the mystery word, a hint to help them guess, and a prompt to guess a letter. <br>
 
 Play <br>
 When the user guesses a letter, the input is validated and the game provides feedback. If the letter is in the word, it is added to the board. If not, the snowman melts down one level. <br>
@@ -31,6 +31,7 @@ I designed this character, "Snowy," based on two different ascii images that I f
 
 ### Future implementations
 In the future I would like to add more features to this game. For instance:
+- Styling
 - Feedback about how many guesses the user took to win
 - A more advanced scoring system
 - Levels of difficulty
@@ -62,14 +63,6 @@ In order for the guessed letter to be validated, both the guess and the letters 
 I researched more about how to re-start the game using a while loop, and found [this resource](https://www.askpython.com/python/examples/restart-loop-in-python#:~:text=Restart%20a%20Nested%20Loop%20in%20Python&text=A%20nested%20loop%20is%20a,will%20understand%20this%20during%20implementation.) helpful.
 - After running the code through the linter and fixing errors, I tested it again and noticed a space at the beginning of some lines of feedback. I fixed this by creating two separate print statements: one for the lines that create space in the terminal for the next guess, and one for the feedback about the correct/incorrect letter and remaining tries.
 
-<!-- In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here. -->
-
 ### Code Validation 
 
 I validated the code in the three .py files with the [Code Institute Python Linter](https://pep8ci.herokuapp.com/). The errors were blank spaces, incorrect indentation, and lines that were too long. There are now no errors.<br> Code in run.py: ![Linter result1](readme-images/linter-result1.png)<br>Code in snowy_images: ![Linter result2](readme-images/linter-result2.png)<br>Code in words_list: ![Linter result3](readme-images/linter-result3.png)<br>
@@ -80,7 +73,7 @@ This game was deployed using Github and Heroku. The deployment terminal is 80 co
 
 ## Finished game
 Here are some screenshots of the finished deployed game. <br>
-![Start](readme-images/screenshot0.png) ![First guess](readme-images/screenshot1.png) ![Next guess](readme-images/screenshot2.png) ![Win](readme-images/screenshot3.png) ![Wrong guess](readme-images/screenshot4.png) ![Next wrong guess](readme-images/screenshot5.png) ![Lose](readme-images/screenshot6.png)
+![Start](readme-images/screenshot0.png) ![Enter username](readme-images/screenshot1.png) ![First guess](readme-images/screenshot2.png) ![Next guess](readme-images/screenshot3.png) ![Win](readme-images/screenshot4.png) ![Wrong guess](readme-images/screenshot5.png) ![Next wrong guess](readme-images/screenshot6.png) ![Lose](readme-images/screenshot7.png)
 
 ## Credits 
 - This game was inspired by the [Hangman Game by Klara Martinsson](https://github.com/KlaraMartinsson/hangman-game/tree/main) which was provided as an example by my cohort facilitator, David Calikes. I used this example to create the structure of my project, and I'm grateful to the coder for helping me learn!
@@ -89,5 +82,6 @@ Here are some screenshots of the finished deployed game. <br>
 - The ascii character was inspired by images [here](https://amgrubb.github.io/csc111/lab-5-loopFunc.html) and [here](https://www.momsarefrommars.com/moms-blog/category/ascii%20art).
 - The words and definitions were adapted from content found in [Weather Words](https://www.metoffice.gov.uk/weather/learn-about/met-office-for-schools/other-content/other-resources/weather-words) and [EnglishClub Weather Vocabulary](https://www.englishclub.com/vocabulary/weather-vocabulary.php).
 - This [resource](https://stackoverflow.com/questions/4859292/how-can-i-get-a-random-key-value-pair-from-a-dictionary/4859322#4859322) for accessing a random pair was provided by CI tutoring (Rebecca).
-- I would like to thank my Code Institute mentor, Adegbenga Adeye, for ideas, patience, and support. <br>
-- Thanks to my cohort facilitator, David Calikes, for kind and helpful reassurance during this project, and great ideas for future implementations.
+- I would like to thank my Code Institute mentor, Adegbenga Adeye, for ideas, patience, and support.
+- Thanks to my cohort facilitator, David Calikes, for kind and helpful reassurance, and great ideas for future implementations.
+- Thanks also to my fellow students, who have been helpful and supportive during this project.
