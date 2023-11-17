@@ -3,16 +3,16 @@
 ![Mockup on different devices, created with Techsini.](readme-images/mockup.png)
 
 Snowy Melt is a mystery-word guessing game for one player. It is written as a Python command-line game. Based on a hint and the word length, the player guesses letters to complete the word. With each wrong guess, Snowy the snowman melts away.<br>
-The game is designed to be fun and entertaining for people of every age and ability. You can find it [here](https://snowy-melt-ad37e9d6291f.herokuapp.com/).
+You can find the game [here](https://snowy-melt-ad37e9d6291f.herokuapp.com/).
 
 ## Features 
 
-<!-- In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things. -->
+The game is designed to be fun for people of every age and ability. Whether the user is learning vocabulary, learning to spell, or just looking for entertainment, this game's input and feedback structure is engaging, and the content is interesting and diverse within its theme.
 
 ### Current features
 
 Greeting <br>
-At the beginning of the game, the user inputs their name. Then they see a persoanlized greeting and an explanation of the rules.<br>
+At the beginning of the game, the user inputs their name. Then they see a personalized greeting and an explanation of the rules.<br>
 
 Start <br>
 A random word/hint pair is pulled from the dictionary. The user sees the snowman character, underscores representing letters in the mystery word, a hint to help them guess, and a prompt to guess a letter. <br>
@@ -80,7 +80,7 @@ This game was deployed using Github and Heroku. The deployment terminal is 80 co
 
 ## Finished game
 Here are some screenshots of the finished deployed game. <br>
-![Start](readme-images/screenshot0.png) ![First guess](readme-images/screenshot1.png) ![Next guess](readme-images/screenshot2.png) ![Guess again](readme-images/screenshot3.png) ![Lose](readme-images/screenshot4.png) ![Win](readme-images/screenshot5.png)
+![Start](readme-images/screenshot0.png) ![First guess](readme-images/screenshot1.png) ![Next guess](readme-images/screenshot2.png) ![Win](readme-images/screenshot3.png) ![Wrong guess](readme-images/screenshot4.png) ![Next wrong guess](readme-images/screenshot5.png) ![Lose](readme-images/screenshot6.png)
 
 ## Credits 
 - This game was inspired by the [Hangman Game by Klara Martinsson](https://github.com/KlaraMartinsson/hangman-game/tree/main) which was provided as an example by my cohort facilitator, David Calikes. I used this example to create the structure of my project, and I'm grateful to the coder for helping me learn!
