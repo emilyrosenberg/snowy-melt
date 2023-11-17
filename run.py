@@ -27,7 +27,7 @@ class Snowy:
         # Spaces out the letters and underscores
         print(*self.secret_word)
         print(*self.guesses)
-        print(f"\nHint: ")
+        print("\nHint: ")
         print(self.hint)
 
     def validate_guess(self, data):
@@ -69,7 +69,7 @@ class Snowy:
             self.tries -= 1
             print(10*"\n")
             print(
-                f"Sorry, that letter is not in the word.\n"
+                "Sorry, that letter is not in the word.\n"
                 f"You have {self.tries} more chances."
             )
 
@@ -80,7 +80,7 @@ class Snowy:
             print(10*"\n")
             print(
                 f"Great job! You have {self.tries}"
-                f" more chances."
+                " more chances."
             )
 
     def word_complete(self):
@@ -105,18 +105,24 @@ def main():
     """
     Welcomes the player by name, shows the rules.
     """
-    print("\nWelcome to Snowy Melt!")
+    print(
+        "\nWelcome to Snowy Melt!\n\n"
+        "This is a mystery-word guessing game.\n"
+        "To play, guess the letters in the mystery word.\n"
+    )
 
     while True:
         name = input("What's your name? \n")
         if not name.isalpha():
-            print(f"\nInvalid name, please enter your name.")
+            print("\nInvalid name, please enter your name.")
         else:
             break
 
     print(
-        f"\nHi {name}! To play, guess the letters in the mystery word.\n"
-        "You get 5 incorrect guesses before Snowy melts away...\n")
+        f"\nHi {name}!\n"
+        "Guess one letter at a time to complete the word.\n"
+        "You get 5 incorrect guesses before Snowy melts away...\n"
+    )
 
     input(f"Are you ready? Press Enter to start the game!\n")
 
