@@ -84,6 +84,7 @@ Here are some screenshots of the finished deployed game. <br>
 
 ## Credits 
 - This game was inspired by the [Hangman Game by Klara Martinsson](https://github.com/KlaraMartinsson/hangman-game/tree/main) which was provided as an example by my cohort facilitator, David Calikes. I used this example to create the structure of my project, and I'm grateful to the coder for helping me learn!
+- I was also inspired by the hangman game example [here](https://hackr.io/blog/python-projects).
 - The idea for a word-guessing game featuring a snowman came from [this website](https://rhodygirlresources.com/product/digital-sight-word-games-snowman-melt/).
 - The ascii character was inspired by images [here](https://amgrubb.github.io/csc111/lab-5-loopFunc.html) and [here](https://www.momsarefrommars.com/moms-blog/category/ascii%20art).
 - The words and definitions were adapted from content found in [Weather Words](https://www.metoffice.gov.uk/weather/learn-about/met-office-for-schools/other-content/other-resources/weather-words) and [EnglishClub Weather Vocabulary](https://www.englishclub.com/vocabulary/weather-vocabulary.php).

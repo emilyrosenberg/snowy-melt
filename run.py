@@ -100,15 +100,15 @@ class Snowy:
 
 
 def main():
-# Inspired by Hangman Game by Klara Martinsson
+    # Inspired by Hangman Game by Klara Martinsson
 
     """
     Welcomes the player by name, shows the rules.
     """
     print(
         "\nWelcome to Snowy Melt!\n\n"
-        "This is a mystery-word guessing game.\n"
-        "To play, guess the letters in the mystery word.\n"
+        "This is a mystery-word guessing game for one player.\n"
+        "It's your goal to guess the letters before Snowy melts!\n"
     )
 
     while True:
@@ -120,7 +120,7 @@ def main():
 
     print(
         f"\nHi {name}!\n"
-        "Guess one letter at a time to complete the word.\n"
+        "Guess one letter at a time to fill in the mystery word.\n"
         "You get 5 incorrect guesses before Snowy melts away...\n"
     )
 
